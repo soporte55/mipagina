@@ -3,24 +3,64 @@ body {
   margin: 0;
   background: #111;
   color: #eee;
-  text-align: center;
 }
 
-header {
-  background: #333;
-  padding: 20px;
-}
-
-.gallery {
+nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 20px;
+  gap: 20px;
+  background: #222;
+  padding: 10px;
 }
 
-.gallery img {
-  max-width: 200px;
-  border-radius: 5px;
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner {
+  background: url('../images/banner.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: #333;
+  color: #eee;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #555;
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab-content.show {
+  display: flex;
+  opacity: 1;
 }
 
 #viewer {

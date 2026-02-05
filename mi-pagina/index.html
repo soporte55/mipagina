@@ -2,28 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi primera página</title>
+  <title>Skyward Visions</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Librerías para 3D -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Bienvenido a mi página de aviones ✈️</h1>
-    <p>Galería de fotos y modelos 3D</p>
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#hangar">3D Hangar</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner principal -->
+  <header class="banner">
+    <h1>SKYWARD VISIONS</h1>
+    <p>Showcasing Aviation Photography & 3D Models</p>
+    <button>EXPLORE</button>
   </header>
 
   <!-- Galería -->
   <section id="gallery">
-    <h2>Galería de Fotos</h2>
-    <div class="gallery">
+    <h2>PHOTO GALLERY</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="military">Military</button>
+      <button class="tab-btn" data-tab="classics">Classics</button>
+      <button class="tab-btn" data-tab="drones">Drones</button>
+    </div>
+
+    <div class="tab-content show" id="military">
       <img src="images/f16.jpg" alt="F-16 Falcon">
       <img src="images/mig29.jpg" alt="MiG-29">
+    </div>
+
+    <div class="tab-content" id="classics">
+      <img src="images/spitfire.jpg" alt="Spitfire">
+      <img src="images/p51.jpg" alt="P-51 Mustang">
+    </div>
+
+    <div class="tab-content" id="drones">
+      <img src="images/drone.jpg" alt="Drone">
+      <img src="images/drone2.jpg" alt="Drone 2">
     </div>
   </section>
 
   <!-- Hangar 3D -->
   <section id="hangar">
-    <h2>Hangar 3D</h2>
+    <h2>3D HANGAR</h2>
     <div id="viewer"></div>
+    <div class="specs">
+      <h3>TECHNICAL SPECIFICATIONS</h3>
+      <ul>
+        <li>Model: Ghost Glint</li>
+        <li>Engine: 2x Vortex Thrustfires</li>
+        <li>Top Speed: Mach 1.8</li>
+        <li>Weight: 12 tons</li>
+        <li>Wingspan: 18m</li>
+      </ul>
+    </div>
   </section>
 
   <script src="js/script.js"></script>
